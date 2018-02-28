@@ -17,18 +17,18 @@ void Point::shift(double koordX, double koordY)
 void Point::turn(double q, const Point& G) 
 {
 	double t;
-	x = x - G.x;       //  переходим в новую систему отсчета
+	x = x - G.x;       //  switch to the new system of coordinates
 	y = y - G.y;
 	t = x;
-	x = x * cos(q) - y * sin(q);   // поворот относительно центра
+	x = x * cos(q) - y * sin(q);   // turn around the middle point
 	y = t * sin(q) + y * cos(q);
-	x = x + G.x;               // обратный переход в старую систему
+	x = x + G.x;               // reverse switch to the init system
 	y = y + G.y;
 }
 
 void Point::info() const
 {
-	cout << "X:" << x << " Y:" << y << "\n";
+	cout << "X:" << x << " Y:" << y << endl;
 }
 
 
@@ -42,9 +42,9 @@ void Circle::opred() const { cout << type << endl; }
 
 void Circle::print() const
 {
-	cout << "Coordinates of center:\n";
+	cout << "Coordinates of center:" << endl;
 	center.info();
-	cout << "Radius: " << radius << "\n";
+	cout << "Radius: " << radius << endl;
 }
 
 void Circle::shift(const Point& V)
@@ -88,11 +88,11 @@ void Triangle::turn(double q, const Point& G)
 
 void Triangle::print() const
 {
-	cout << "Coordinates top1:\n";  
+	cout << "Coordinates top1:" << endl;
 	top1.info();
-	cout << "Coordinates top2:\n";
+	cout << "Coordinates top2:" << endl;
 	top2.info();
-	cout << "Coordinates top3:\n";
+	cout << "Coordinates top3:" << endl;
 	top3.info();
 
 	cout << "The first side: " << side(top1, top2) << endl;

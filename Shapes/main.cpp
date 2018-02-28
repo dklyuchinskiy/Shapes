@@ -6,7 +6,7 @@ int main()
 {
 #if 1
 
-	//проверка 4-угольников
+	// Test 4-angles
 	double x, y;
 	Point A(0, 4);
 	Point B(4, 0);
@@ -20,7 +20,7 @@ int main()
 	{
 		Shape* m[8];
 
-		Point T(0, 0);        //точка поворота
+		Point T(0, 0);        // point of the turn
 
 		m[0] = new Circle(3, O);
 		m[1] = new Polygon();
@@ -46,7 +46,7 @@ int main()
 	}
 
 	{
-		//Проверка многоугольника
+		// Test Polygon
 		Polygon PP;
 		PP.insert_end(A);
 		PP.insert_end(B);
@@ -59,10 +59,10 @@ int main()
 		print_info(PP);
 
 		Polygon a;
-		cout << "Skolko budet versin?\n";
+		cout << "How much vertices?\n";
 		int n;
 		cin >> n;
-		cout << "Vvedite ih:\n";
+		cout << "Enter them:\n";
 		for (int i = 0; i < n; i++)
 		{
 			scanf("%lf", &x);
@@ -120,7 +120,7 @@ int main()
 		system("pause");
 	}
 	{
-		//Проверка круга 
+		// Check Circle
 		double r;
 
 		cout << "Enter center and radius:\n";
@@ -144,7 +144,7 @@ int main()
 
 	}
 
-	//Проверка треугольника
+	// Test Triangle
 
 	{
 		cout << "Enter 3 points\n";
